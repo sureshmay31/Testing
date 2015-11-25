@@ -33,7 +33,7 @@ public class PersonDaoImpl implements PersonDao {
     public void addPerson(Person p) {
         Session session = this.sessionFactory.getCurrentSession();
         session.persist(p);
-        logger.info("Person saved successfully, Person Details="+p);
+        logger.info("Person saved successfully using hibernate , Person Details="+p);
     }
 
     @Override
