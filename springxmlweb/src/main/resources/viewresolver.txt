@@ -1,0 +1,43 @@
+  <!-- 
+  	xml view reslover
+  	<bean class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="location">
+			<value>/WEB-INF/views.xml</value>
+		</property>
+	</bean>
+  
+  views.xml 
+  =========
+      <bean id="helloWorld"
+        class="org.springframework.web.servlet.view.JstlView">
+        <property name="url" value="/WEB-INF/helloWorld.jsp" />
+    </bean>
+  =========
+  
+  ResourceBundleViewResolver
+  	<bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename" value="views" />
+	</bean>
+  
+  view.properties
+  helloworld.(class)=org.springframework.web.servlet.view.JstlView
+  helloworld.url=/WEB-INF/helloworld.jsp
+  
+  urlBasedViewResolver
+  used in classes
+  
+  <!-- ContentNegotiatingViewResolver
+  	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+	  <property name="order" value="1" />
+	  <property name="mediaTypes">
+		<map>
+		   <entry key="json" value="application/json" />
+		   <entry key="xml" value="application/xml" />
+		   <entry key="rss" value="application/rss+xml" />
+		</map>
+	  </property>
+  
+  
+   -->
+   
+   <!-- velocity view resolver -->

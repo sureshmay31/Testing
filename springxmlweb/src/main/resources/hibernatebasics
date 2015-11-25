@@ -1,0 +1,20 @@
+<!-- loading through xml --->
+
+Configuration cfg = new Configuration()
+    .addClass(com.springxml.model.Person.class)
+SessionFactory sessionFactory = cfg.buildSessionFactory();
+Session session = sessionFactory.openSession();
+
+<!-- programmatic way of configuring -->
+Configuration cfg = new Configuration()
+    .addClass(com.springxml.model.Person.class)
+    .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
+    .setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver")
+    .setProperty("hibernate.connection.username", "myuser");
+    .setProperty("hibernate.connection.password", "mypassword")
+    .setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/websystique")
+    .setProperty("hibernate.show_sql", "true")
+    .setProperty("hibernate.format_sql", "true");
+ 
+SessionFactory sessionFactory = cfg.buildSessionFactory();
+Session session = sessionFactory.openSession();

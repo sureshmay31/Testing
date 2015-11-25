@@ -1,0 +1,57 @@
+     <!-- 
+ beans:beanNameUrlHandlerMapping
+ <beans:bean
+    name="/welcome.htm"
+    class="net.codejava.frameorks.spring.mvc.controller.WelcomeController" />
+<beans:bean
+    name="/listBooks.htm"
+    class="net.codejava.frameorks.spring.mvc.controller.ListBooksController"/>
+<beans:bean
+    name="/displayBookTOC.htm"
+    class="net.codejava.frameorks.spring.mvc.controller.DisplayBookTOCController"/>
+  -->
+ 
+ <!-- 
+ SimpleURLHandlerMapping
+ <beans:bean
+ id="myHandlerMapping"
+ class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+   <property name="mappings">
+      <props>
+         <prop key="/welcome.htm">welcomeController</prop>
+         <prop key="/listBooks.htm">listBooksController</prop>
+         <prop key="/displayBookTOC.htm">displayBookTOCController</prop>
+      </props>
+   </property>
+</beans:bean>
+<beans:bean name="welcomeController"
+ class="net.codejava.frameorks.spring.mvc.controller.WelcomeController"/>
+<beans:bean name="listBooksController"
+ class="net.codejava.frameorks.spring.mvc.controller.ListBooksController"/>
+<beans:bean name="displayBookTOCController"
+ class="net.codejava.frameorks.spring.mvc.controller.DisplayBookTOCController"/>
+  -->
+ 
+ <!--
+   controller’s beans:bean’s name is no longer required as used in beans:beanNameUrlHanlderMapping
+   <beans:bean 
+   class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+	
+  <beans:bean class="com.mkyong.common.controller.WelcomeController" />
+	
+  <beans:bean class="com.mkyong.common.controller.HelloGuestController" />
+-->
+
+ <!--  Controllerbeans:beanNameHandlerMapping
+ <beans:bean id="handlerMapping" class="org.springframework.web.servlet.mvc.support.Controllerbeans:beanNameHandlerMapping"/>
+ 
+ <beans:bean name="helloworld.html" class="com.kruders.controller.HelloWorldController" />
+ 
+  -->
+ <!-- 
+ 
+ DefaultAnnotationHandlerMapping
+ 
+ RequestMappingHandlerMapping
+  -->
+    
