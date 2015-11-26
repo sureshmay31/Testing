@@ -24,6 +24,7 @@ public class PersonServiceImpl implements PersonService {
     @Transactional
     public void addPerson(Person p) {
         this.personDAO.addPerson(p);
+        System.out.println("test");
     }
  
     @Override
